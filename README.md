@@ -20,8 +20,54 @@ pip insatll -r requirements.txt
 ```
 
 ```bash
+alembic revision --autogenerate -m "INIT"
+
+alembic upgrade head
+```
+
+```bash
 uvicorn start:app --reload
 ```
 
 go to http://localhost:8000/docs<br>
 Enjoy!
+
+## Usage
+
+### Curl
+
+get all:
+
+```bash
+curl --request GET --url "localhost:8000/operations/data"
+```
+
+get todo:
+
+```bash
+curl --request GET --url "localhost:8000/operations/task/{id}"
+```
+
+add todo:
+
+```bash
+curl --header "Content-Type: application/json" \
+--request POST \
+--data '{"title": "title test"}' \
+http://127.0.0.1:8000/operations/add
+```
+
+Update todo:
+
+```bash
+curl --header "Content-Type: application/json" \
+--request PUT \
+--data '{"title": "Update title test"}' \
+http://127.0.0.1:8000/operations/update/{id}
+```
+
+Delete todo:
+
+```bash
+curl --request DELETE "localhost:8000/operations/delete/{id}"
+```
