@@ -1,6 +1,6 @@
 # Simple implementation of RestAPI (FastAPI)
 
-[For Django](https://github.com/ZeroNiki/Django-RestAPI-Example)
+[For Django](https://github.com/ZeroNiki/Django-RestAPI-Example)<br>
 A simple example of using RestAPi on FastAPI
 
 ## Install
@@ -23,5 +23,5 @@ pip insatll -r requirements.txt
 uvicorn start:app --reload
 ```
 
-go to http://localhost:8000/docs
+go to http://localhost:8000/docs<br>
 Enjoy!
