@@ -1,4 +1,5 @@
-from sqlalchemy import Table, String, Integer, TIMESTAMP, Column, Boolean, MetaData
+from sqlalchemy import (Table, String, Integer,
+                        TIMESTAMP, Column, Boolean, MetaData)
 from sqlalchemy.sql import func
 
 metadata = MetaData()

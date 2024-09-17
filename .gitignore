@@ -43,7 +43,9 @@ coverage.xml
 *.sqlite3
 
 # Alembic
-alembic/versions/
+migrations/versions/*.py
+migrations/versions/*.py
+
 
 # Logs
 logs/
